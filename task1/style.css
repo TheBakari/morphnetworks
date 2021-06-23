@@ -29,6 +29,7 @@ body{
   /* BUTTON */
   .button{
       color: #fafafa;
+      
   }
 
 .dynamic{
@@ -65,14 +66,14 @@ body{
   z-index:10;
   font-size:18px;
   font-weight:500;
-  color:#4158d0;
+  color:#95cefa;
 }
 
 .circular .bar{
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #fff;
+  background: #fafafa;
   -webkit-border-radius: 100%;
   clip: rect(0px, 100px, 100px, 50px);
 }
@@ -83,7 +84,7 @@ body{
   width: 100%;
   -webkit-border-radius: 100%;
   clip: rect(0px, 50px, 100px, 0px);
-  background: #4158d0;
+  background: #95cefa;
 }
 
 .circle .left .progress{
@@ -263,3 +264,5 @@ body{
 .rowOfCheckBox{
   margin: -50px 0 0 78px;
 }
+
+

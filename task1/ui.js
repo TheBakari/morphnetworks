@@ -10,7 +10,3 @@ setInterval(() => {
   }
 }, 80);
 
-function focus(){
-  alert("input filed is empry")
-}
-
