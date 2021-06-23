@@ -1,0 +1,265 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    padding: 0;
+    margin: 0;
+}
+.topHeader{
+    background-color:#2196f3 ;
+    color: white;
+    text-align: left;
+    padding: 30px 0 30px 90px ;
+}
+.topHeader p{
+    margin: 0;
+    position: relative;
+    
+}
+.tekst{ 
+    padding: 11px;
+}
+
+.colorOfText{
+    color: #757575;
+    margin-bottom: 40px;
+}
+
+  /* BUTTON */
+  .button{
+      color: #fafafa;
+  }
+
+.dynamic{
+  position: absolute;
+  left: 3px;
+  top: 5px;
+}
+
+  /* loading progress bar */
+
+.circular{
+  height:100px;
+  width: 100px;
+  position: relative;  
+  transform: scale(0.4);
+}
+.circular .inner{
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: white;
+  border-radius: 100%;
+}
+
+.circular .number{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:10;
+  font-size:18px;
+  font-weight:500;
+  color:#4158d0;
+}
+
+.circular .bar{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+
+.circle .bar .progress{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #4158d0;
+}
+
+.circle .left .progress{
+  z-index:1;
+  animation: left 4s linear both;
+}
+@keyframes left{
+  100%{
+    transform: rotate(180deg);
+  }
+}
+.circle .right {
+  transform: rotate(180deg);
+  z-index:3;
+ 
+}
+.circle .right .progress{
+  animation: right 4s linear both;
+  animation-delay:4s;
+}
+@keyframes right{
+  100%{
+    transform: rotate(180deg);
+  }
+}
+/* check mark */
+  .checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #95cefa;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+  } 
+  
+  
+  .checkmark {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #95cefa;
+    stroke-miterlimit: 10;
+    margin: 25px;
+    box-shadow: inset 0px 0px 0px #95cefa;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  }
+
+  .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  }
+  
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes scale {
+    0%,
+    100% {
+      transform: none;
+    }
+    50% {
+      transform: scale3d(1.1, 1.1, 1);
+    }
+  }
+  
+  @keyframes fill {
+    100% {
+      box-shadow: inset 0px 0px 0px 30px #fafafa;
+    }
+  }
+  /* text */
+  input[type=text] {
+    border: 0;
+    width: 100%;
+    border-bottom: 1px solid #929fba;
+  }
+  input[type=text]:focus {
+    width: 100%;
+    transition: 0.5s;
+    outline: none;
+    color: #2196f3;
+    border-bottom: 1px solid #2196f3;
+    
+    
+  }
+  
+  input[type=text] + svg {
+    display: none;
+  }
+  
+  input[type=text]:hover + svg {
+    display: block;
+  }
+
+  /* checkbox class */
+  .check-box {
+    position: relative;
+  }
+  
+  .check-box label {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: left;
+    padding-left: 88px;
+  }
+  
+  .check-box label svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  /* for checkboxes */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="checkbox"]:not(:checked)+label,
+[type="checkbox"]:checked+label {
+  position: relative;
+  padding-left: 48px;
+  padding-bottom: 63px;
+  cursor: pointer;
+}
+
+[type="checkbox"]:not(:checked)+label:before,
+[type="checkbox"]:checked+label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1);
+  border-radius: 50%;
+  
+  outline: none;
+}
+[type="checkbox"]:checked+label:before{
+  background-color: #5cf1b3;
+}
+[type="checkbox"]:not(:checked)+label:after,
+[type="checkbox"]:checked+label:after {
+  content: '✔';
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  font-size: 16px;
+  line-height: 0.8;
+  color: #fff;
+  transition: all .2s;
+  background-color: #5cf1b3;
+}
+
+[type="checkbox"]:not(:checked)+label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+[type="checkbox"]:checked+label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.rowOfCheckBox{
+  margin: -50px 0 0 78px;
+}
